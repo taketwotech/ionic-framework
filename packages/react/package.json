@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "@ionic/core": "^7.5.3",
-    "ionicons": "^7.2.2-dev.11699018299.154342d5",
+    "ionicons": "^7.2.2-dev.11699022363.15a70775",
     "tslib": "*"
   },
   "peerDependencies": {
