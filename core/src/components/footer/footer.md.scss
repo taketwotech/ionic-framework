@@ -4,10 +4,10 @@
 // Material Design Footer
 // --------------------------------------------------
 
-.footer-md {
+:host {
   box-shadow: $footer-md-box-shadow;
 }
 
-.footer-md.ion-no-border {
+:host(.ion-no-border) {
   box-shadow: none;
 }

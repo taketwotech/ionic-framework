@@ -17,6 +17,7 @@ import { handleFooterFade } from './footer.utils';
     ios: 'footer.ios.scss',
     md: 'footer.md.scss',
   },
+  shadow: true
 })
 export class Footer implements ComponentInterface {
   private scrollEl?: HTMLElement;

@@ -4,7 +4,7 @@
 // iOS Footer
 // --------------------------------------------------
 
-.footer-ios ion-toolbar:first-of-type {
+::slotted(ion-toolbar:first-of-type) {
   --border-width: #{$hairlines-width} 0 0;
 }
 
@@ -16,18 +16,18 @@
 
     backdrop-filter: $footer-ios-translucent-filter;
   }
-  .footer-translucent-ios ion-toolbar {
+  :host(.footer-translucent-ios) :slotted(ion-toolbar) {
     --opacity: .8;
   }
 }
 
-.footer-ios.ion-no-border ion-toolbar:first-of-type {
+:host(.ion-no-border) ::slotted(ion-toolbar:first-of-type) {
   --border-width: 0;
 }
 
 // iOS Footer - Collapse Fade
 // --------------------------------------------------
 
-.footer-collapse-fade ion-toolbar {
+:host(.footer-collapse-fade) ::slotted(ion-toolbar) {
   --opacity-scale: inherit;
 }
