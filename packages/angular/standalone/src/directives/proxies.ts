@@ -805,15 +805,14 @@ export declare interface IonFabList extends Components.IonFabList {}
 
 
 @ProxyCmp({
-  defineCustomElementFn: defineIonFooter,
-  inputs: ['collapse', 'mode', 'translucent']
+  defineCustomElementFn: defineIonFooter
 })
 @Component({
   selector: 'ion-footer',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['collapse', 'mode', 'translucent'],
+  inputs: [],
   standalone: true
 })
 export class IonFooter {

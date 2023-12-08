@@ -502,9 +502,6 @@ ion-fab-list,prop,activated,boolean,false,false,false
 ion-fab-list,prop,side,"bottom" | "end" | "start" | "top",'bottom',false,false
 
 ion-footer,none
-ion-footer,prop,collapse,"fade" | undefined,undefined,false,false
-ion-footer,prop,mode,"ios" | "md",undefined,false,false
-ion-footer,prop,translucent,boolean,false,false,false
 
 ion-grid,shadow
 ion-grid,prop,fixed,boolean,false,false,false

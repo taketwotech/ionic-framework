@@ -352,10 +352,7 @@ export const IonFabList = /*@__PURE__*/ defineContainer<JSX.IonFabList>('ion-fab
 ]);
 
 
-export const IonFooter = /*@__PURE__*/ defineContainer<JSX.IonFooter>('ion-footer', defineIonFooter, [
-  'collapse',
-  'translucent'
-]);
+export const IonFooter = /*@__PURE__*/ defineContainer<JSX.IonFooter>('ion-footer', defineIonFooter);
 
 
 export const IonGrid = /*@__PURE__*/ defineContainer<JSX.IonGrid>('ion-grid', defineIonGrid, [
