@@ -7,22 +7,26 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <link href="../../../../../css/ionic.bundle.css" rel="stylesheet" />
-    <link href="../../../../../scripts/testing/styles.css" rel="stylesheet" />
-    <script src="../../../../../scripts/testing/scripts.js"></script>
-    <script nomodule src="../../../../../dist/ionic/ionic.js"></script>
     <script type="module" src="../../../../../dist/ionic/ionic.esm.js"></script>
   </head>
   <body>
-    <ion-app>
-      <ion-content class="ion-padding">
-        <h1>Content</h1>
-      </ion-content>
-      <ion-footer>
-        <ion-toolbar>
-          <ion-title>Footer</ion-title>
-        </ion-toolbar>
-      </ion-footer>
-    </ion-app>
+    <button onclick="toggle()">Toggle Footer</button>
+    <div id="container"></div>
+
+    <script>
+      const container = document.querySelector('#container');
+
+      const toggle = () => {
+        let footer = container.querySelector('ion-footer');
+
+        if (footer === null) {
+          footer = document.createElement('ion-footer');
+          footer.innerText = 'hello'
+          container.appendChild(footer);
+        } else {
+          footer.remove();
+        }
+      }
+    </script>
   </body>
 </html>

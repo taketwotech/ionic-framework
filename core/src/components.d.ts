@@ -1072,18 +1072,6 @@ export namespace Components {
         "side": 'start' | 'end' | 'top' | 'bottom';
     }
     interface IonFooter {
-        /**
-          * Describes the scroll effect that will be applied to the footer. Only applies in iOS mode.
-         */
-        "collapse"?: 'fade';
-        /**
-          * The mode determines which platform styles to use.
-         */
-        "mode"?: "ios" | "md";
-        /**
-          * If `true`, the footer will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).  Note: In order to scroll content behind the footer, the `fullscreen` attribute needs to be set on the content.
-         */
-        "translucent": boolean;
     }
     interface IonGrid {
         /**
@@ -5775,18 +5763,6 @@ declare namespace LocalJSX {
         "side"?: 'start' | 'end' | 'top' | 'bottom';
     }
     interface IonFooter {
-        /**
-          * Describes the scroll effect that will be applied to the footer. Only applies in iOS mode.
-         */
-        "collapse"?: 'fade';
-        /**
-          * The mode determines which platform styles to use.
-         */
-        "mode"?: "ios" | "md";
-        /**
-          * If `true`, the footer will be translucent. Only applies when the mode is `"ios"` and the device supports [`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).  Note: In order to scroll content behind the footer, the `fullscreen` attribute needs to be set on the content.
-         */
-        "translucent"?: boolean;
     }
     interface IonGrid {
         /**
