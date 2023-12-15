@@ -1,0 +1,13 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-base-theme();
+  }
+
+  body.ios {
+    @include dark-ios-theme();
+  }
+
+  body.md {
+    @include dark-md-theme();
+  }
+}
