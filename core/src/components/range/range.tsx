@@ -941,7 +941,7 @@ const renderKnob = (
     >
       {pin && (
         <div class="range-pin" role="presentation" part="pin">
-          {pinFormatter(value)}
+          {pinFormatter.bind(this)(value)}
         </div>
       )}
       <div class="range-knob" role="presentation" part="knob" />

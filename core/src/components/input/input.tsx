@@ -620,7 +620,7 @@ export class Input implements ComponentInterface {
       return;
     }
 
-    return <div class="counter">{getCounterText(value, maxlength, counterFormatter)}</div>;
+    return <div class="counter">{getCounterText(value, maxlength, counterFormatter?.bind(this))}</div>;
   }
 
   /**
