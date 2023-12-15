@@ -1,3 +1,5 @@
+@import "./dark";
+
 .ion-theme-dark {
   @include dark-base-theme();
 }
