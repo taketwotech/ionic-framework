@@ -4,10 +4,10 @@
   @include dark-base-theme();
 }
 
-body.ios {
+.ios body {
   @include dark-ios-theme();
 }
 
-body.md {
+.md body {
   @include dark-md-theme();
 }
