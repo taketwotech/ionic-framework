@@ -23,13 +23,26 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  determine-nightly-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate NPM Release Version String
+        id: get_npm_release_version_string
+        # Use the version that was provided by the user, otherwise default to 'nightly'.
+        # Use `sed` to replace any leading or trailing whitespace.
+        run: |
+          NPM_VERSION_STRING=$(${{ inputs.npm_release_tag || 'nightly' }} | sed 's/^[ \t]*//;s/[ \t]*$//')
+          echo "NPM_VERSION_STRING=$NPM_VERSION_STRING" >> "$GITHUB_OUTPUT"
+        shell: bash
+
   build-core-with-stencil-nightly:
+    needs: [determine-nightly-name]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: ./.github/workflows/actions/build-core-stencil-prerelease
         with:
-          stencil-version: ${{ inputs.npm_release_tag || 'nightly' }}
+          stencil-version: ${{ steps.get_npm_release_version_string.outputs.NPM_VERSION_STRING }}
 
   test-core-clean-build:
     needs: [build-core-with-stencil-nightly]
@@ -52,7 +65,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/workflows/actions/test-core-spec
         with:
-          stencil-version: ${{ inputs.npm_release_tag || 'nightly' }}
+          stencil-version: ${{ steps.get_npm_release_version_string.outputs.NPM_VERSION_STRING }}
 
   test-core-screenshot:
     strategy:
