@@ -1,6 +1,6 @@
 {
-  "name": "@ionic/core",
-  "version": "5.9.4",
+  "name": "ms-ionic-core",
+  "version": "5.9.4-ms",
   "description": "Base components for Ionic",
   "keywords": [
     "ionic",
@@ -99,7 +99,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/ionic.git"
+    "url": "git+https://github.com/taketwotech/ionic-framework.git"
   },
   "bugs": {
     "url": "https://github.com/ionic-team/ionic/issues"
